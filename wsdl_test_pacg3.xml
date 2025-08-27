@@ -1,0 +1,1345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.contidigioco.sogei.it" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsd1="http://model.ws.contidigioco.sogei.it" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" name="ContiDiGioco" targetNamespace="http://ws.contidigioco.sogei.it">
+	<wsdl:types>
+		<xsd:schema>
+			<xsd:import namespace="http://model.ws.contidigioco.sogei.it" schemaLocation="ContiDiGiocoXMLSchema.xsd"/>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="movimentazioneContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:movimentazioneContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="movimentazioneContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:movimentazioneContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="cambioStatoContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:cambioStatoContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="cambioStatoContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:cambioStatoContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="saldoContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:saldoContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="saldoContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:saldoContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="modificaProvinciaResidenzaContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:modificaProvinciaResidenzaContoIn"/>
+	</wsdl:message>
+	<wsdl:message name="modificaProvinciaResidenzaContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:modificaProvinciaResidenzaContoOut"/>
+	</wsdl:message>
+	<wsdl:message name="interrogazioneStatoContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:interrogazioneStatoContoIn"/>
+	</wsdl:message>
+	<wsdl:message name="interrogazioneStatoContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:interrogazioneStatoContoOut"/>
+	</wsdl:message>
+	<wsdl:message name="migrazioneContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:migrazioneContoIn"/>
+	</wsdl:message>
+	<wsdl:message name="migrazioneContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:migrazioneContoOut"/>
+	</wsdl:message>
+	<wsdl:message name="riepilogoOperazioniMovimentazioneMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:riepilogoOperazioniMovimentazioneIn"/>
+	</wsdl:message>
+	<wsdl:message name="riepilogoOperazioniMovimentazioneMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:riepilogoOperazioniMovimentazioneOut"/>
+	</wsdl:message>
+	<wsdl:message name="riepilogoOperazioniServizioMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:riepilogoOperazioniServizioIn"/>
+	</wsdl:message>
+	<wsdl:message name="riepilogoOperazioniServizioMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:riepilogoOperazioniServizioOut"/>
+	</wsdl:message>
+	<wsdl:message name="stornoMovimentazioneContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:stornoMovimentazioneContoIn"/>
+	</wsdl:message>
+	<wsdl:message name="stornoMovimentazioneContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:stornoMovimentazioneContoOut"/>
+	</wsdl:message>
+	<wsdl:message name="subregistrazione2MsgRequest">
+		<wsdl:part name="parameters" element="xsd1:subregistrazione2In"/>
+	</wsdl:message>
+	<wsdl:message name="subregistrazione2MsgResponse">
+		<wsdl:part name="parameters" element="xsd1:subregistrazione2Out"/>
+	</wsdl:message>
+	<wsdl:message name="contoDormienteMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:contoDormienteIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="contoDormienteMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:contoDormienteOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="elencoContiDormientiMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:elencoContiDormientiIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="elencoContiDormientiMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:elencoContiDormientiOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="aggiornaLimiteMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:aggiornaLimiteIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="aggiornaLimiteMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:aggiornaLimiteOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="interrogazioneLimitiMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:interrogazioneLimitiIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="interrogazioneLimitiMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:interrogazioneLimitiOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="gestioneAutoesclusioneTrasversaleMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:gestioneAutoesclusioneTrasversaleIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="gestioneAutoesclusioneTrasversaleMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:gestioneAutoesclusioneTrasversaleOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="interrogazioneSoggettoAutoesclusoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:interrogazioneSoggettoAutoesclusoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="interrogazioneSoggettoAutoesclusoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:interrogazioneSoggettoAutoesclusoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="aggiornaPseudonimoContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:aggiornaPseudonimoContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="aggiornaPseudonimoContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:aggiornaPseudonimoContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="aggiornaPostaElettronicaContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:aggiornaPostaElettronicaContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="aggiornaPostaElettronicaContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:aggiornaPostaElettronicaContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="interrogazioneProvinciaResidenzaContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:interrogazioneProvinciaResidenzaContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="interrogazioneProvinciaResidenzaContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:interrogazioneProvinciaResidenzaContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="interrogazionePseudonimoContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:interrogazionePseudonimoContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="interrogazionePseudonimoContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:interrogazionePseudonimoContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="interrogazionePostaElettronicaContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:interrogazionePostaElettronicaContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="interrogazionePostaElettronicaContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:interrogazionePostaElettronicaContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="elencoContiAutoesclusi2MsgRequest">
+		<wsdl:part name="parameters" element="xsd1:elencoContiAutoesclusi2In">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="elencoContiAutoesclusi2MsgResponse">
+		<wsdl:part name="parameters" element="xsd1:elencoContiAutoesclusi2Out">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="stornoMovimentazioneBonusContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:stornoMovimentazioneBonusContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="stornoMovimentazioneBonusContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:stornoMovimentazioneBonusContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="movimentazioneBonusConto2MsgRequest">
+		<wsdl:part name="parameters" element="xsd1:movimentazioneBonusConto2In">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="movimentazioneBonusConto2MsgResponse">
+		<wsdl:part name="parameters" element="xsd1:movimentazioneBonusConto2Out">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="aperturaContoPersonaFisica3MsgRequest">
+		<wsdl:part name="parameters" element="xsd1:aperturaContoPersonaFisica3In">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="aperturaContoPersonaFisica3MsgResponse">
+		<wsdl:part name="parameters" element="xsd1:aperturaContoPersonaFisica3Out">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="aggiornaDatiDocumentoTitolareConto2MsgRequest">
+		<wsdl:part name="parameters" element="xsd1:aggiornaDatiDocumentoTitolareConto2In"/>
+	</wsdl:message>
+	<wsdl:message name="aggiornaDatiDocumentoTitolareConto2MsgResponse">
+		<wsdl:part name="parameters" element="xsd1:aggiornaDatiDocumentoTitolareConto2Out"/>
+	</wsdl:message>
+	<wsdl:message name="interrogazioneEstremiDocumento2MsgRequest">
+		<wsdl:part name="parameters" element="xsd1:interrogazioneEstremiDocumento2In">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="interrogazioneEstremiDocumento2MsgResponse">
+		<wsdl:part name="parameters" element="xsd1:interrogazioneEstremiDocumento2Out">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="aperturaContoPersonaGiuridica2MsgRequest">
+		<wsdl:part name="parameters" element="xsd1:aperturaContoPersonaGiuridica2In">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="aperturaContoPersonaGiuridica2MsgResponse">
+		<wsdl:part name="parameters" element="xsd1:aperturaContoPersonaGiuridica2Out">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="elencoContiSenzaSubregistrazione2MsgRequest">
+		<wsdl:part name="parameters" element="xsd1:elencoContiSenzaSubregistrazione2In">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="elencoContiSenzaSubregistrazione2MsgResponse">
+		<wsdl:part name="parameters" element="xsd1:elencoContiSenzaSubregistrazione2Out">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="elencoContiDormienti2MsgRequest">
+		<wsdl:part name="parameters" element="xsd1:elencoContiDormienti2In">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="elencoContiDormienti2MsgResponse">
+		<wsdl:part name="parameters" element="xsd1:elencoContiDormienti2Out">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="preMigrazioneContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:preMigrazioneContoIn"/>
+	</wsdl:message>
+	<wsdl:message name="preMigrazioneContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:preMigrazioneContoOut"/>
+	</wsdl:message>
+	<wsdl:message name="V3aperturaContoPersonaFisicaMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3aperturaContoPersonaFisicaIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3aperturaContoPersonaFisicaMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3aperturaContoPersonaFisicaOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3aperturaContoPersonaGiuridicaMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3aperturaContoPersonaGiuridicaIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3aperturaContoPersonaGiuridicaMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3aperturaContoPersonaGiuridicaOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3movimentazioneContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3movimentazioneContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3movimentazioneContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3movimentazioneContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3stornoMovimentazioneContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3stornoMovimentazioneContoIn"/>
+	</wsdl:message>
+	<wsdl:message name="V3stornoMovimentazioneContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3stornoMovimentazioneContoOut"/>
+	</wsdl:message>
+	<wsdl:message name="V3movimentazioneBonusContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3movimentazioneBonusContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3movimentazioneBonusContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3movimentazioneBonusContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3stornoMovimentazioneBonusContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3stornoMovimentazioneBonusContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3stornoMovimentazioneBonusContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3stornoMovimentazioneBonusContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3verificaIntegritaSoftwareMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3verificaIntegritaSoftwareIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3verificaIntegritaSoftwareMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3verificaIntegritaSoftwareOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3accreditoContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3accreditoContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3accreditoContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3accreditoContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3stornoAccreditoContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3stornoAccreditoContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3stornoAccreditoContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3stornoAccreditoContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3cambioStatoContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3cambioStatoContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3cambioStatoContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3cambioStatoContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3interrogazioneStatoContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3interrogazioneStatoContoIn"/>
+	</wsdl:message>
+	<wsdl:message name="V3interrogazioneStatoContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3interrogazioneStatoContoOut"/>
+	</wsdl:message>
+	<wsdl:message name="V3subregistrazioneMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3subregistrazioneIn"/>
+	</wsdl:message>
+	<wsdl:message name="V3subregistrazioneMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3subregistrazioneOut"/>
+	</wsdl:message>
+	<wsdl:message name="V3elencoContiSenzaSubregistrazioneMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3elencoContiSenzaSubregistrazioneIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3elencoContiSenzaSubregistrazioneMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3elencoContiSenzaSubregistrazioneOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3contoDormienteMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3contoDormienteIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3contoDormienteMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3contoDormienteOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3elencoContiDormientiMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3elencoContiDormientiIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3elencoContiDormientiMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3elencoContiDormientiOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3gestioneAutoesclusioneMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3gestioneAutoesclusioneIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3gestioneAutoesclusioneMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3gestioneAutoesclusioneOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3interrogazioneSoggettoAutoesclusoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3interrogazioneSoggettoAutoesclusoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3interrogazioneSoggettoAutoesclusoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3interrogazioneSoggettoAutoesclusoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3elencoContiAutoesclusiMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3elencoContiAutoesclusiIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3elencoContiAutoesclusiMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3elencoContiAutoesclusiOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3aggiornaDatiDocumentoTitolareContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3aggiornaDatiDocumentoTitolareContoIn"/>
+	</wsdl:message>
+	<wsdl:message name="V3aggiornaDatiDocumentoTitolareContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3aggiornaDatiDocumentoTitolareContoOut"/>
+	</wsdl:message>
+	<wsdl:message name="V3interrogazioneEstremiDocumentoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3interrogazioneEstremiDocumentoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3interrogazioneEstremiDocumentoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3interrogazioneEstremiDocumentoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3aggiornaDatiResidenzaContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3aggiornaDatiResidenzaContoIn"/>
+	</wsdl:message>
+	<wsdl:message name="V3aggiornaDatiResidenzaContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3aggiornaDatiResidenzaContoOut"/>
+	</wsdl:message>
+	<wsdl:message name="V3interrogazioneDatiResidenzaContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3interrogazioneDatiResidenzaContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3interrogazioneDatiResidenzaContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3interrogazioneDatiResidenzaContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3aggiornaAutolimitazioneContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3aggiornaAutolimitazioneContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3aggiornaAutolimitazioneContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3aggiornaAutolimitazioneContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3interrogazioneAutolimitazioniContoMsgRequest">
+		<wsdl:part name="V3parameters" element="xsd1:V3interrogazioneAutolimitazioniContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3interrogazioneAutolimitazioniContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3interrogazioneAutolimitazioniContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3superamentoAutolimitazioneContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3superamentoAutolimitazioneContoIn"/>
+	</wsdl:message>
+	<wsdl:message name="V3superamentoAutolimitazioneContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3superamentoAutolimitazioneContoOut"/>
+	</wsdl:message>
+	<wsdl:message name="V3aggiornaPseudonimoContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3aggiornaPseudonimoContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3aggiornaPseudonimoContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3aggiornaPseudonimoContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3interrogazionePseudonimoContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3interrogazionePseudonimoContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3interrogazionePseudonimoContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3interrogazionePseudonimoContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3aggiornaPostaElettronicaContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3aggiornaPostaElettronicaContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3aggiornaPostaElettronicaContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3aggiornaPostaElettronicaContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3interrogazionePostaElettronicaContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3interrogazionePostaElettronicaContoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3interrogazionePostaElettronicaContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3interrogazionePostaElettronicaContoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3migrazioneConfluenzaContinuitaContoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3migrazioneConfluenzaContinuitaContoIn"/>
+	</wsdl:message>
+	<wsdl:message name="V3migrazioneConfluenzaContinuitaContoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3migrazioneConfluenzaContinuitaContoOut"/>
+	</wsdl:message>
+	<wsdl:message name="V3riepilogoOperazioniMovimentazioneMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3riepilogoOperazioniMovimentazioneIn"/>
+	</wsdl:message>
+	<wsdl:message name="V3riepilogoOperazioniMovimentazioneMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3riepilogoOperazioniMovimentazioneOut"/>
+	</wsdl:message>
+	<wsdl:message name="V3riepilogoOperazioniServizioMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3riepilogoOperazioniServizioIn"/>
+	</wsdl:message>
+	<wsdl:message name="V3riepilogoOperazioniServizioMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3riepilogoOperazioniServizioOut"/>
+	</wsdl:message>
+	<wsdl:message name="V3disconnessioneMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3disconnessioneIn"/>
+	</wsdl:message>
+	<wsdl:message name="V3disconnessioneMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3disconnessioneOut"/>
+	</wsdl:message>
+	<wsdl:message name="V3pagamentoPostPrelievoMsgRequest">
+		<wsdl:part name="parameters" element="xsd1:V3pagamentoPostPrelievoIn">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="V3pagamentoPostPrelievoMsgResponse">
+		<wsdl:part name="parameters" element="xsd1:V3pagamentoPostPrelievoOut">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="ContiDiGiocoWS">
+		<wsdl:operation name="movimentazioneConto">
+			<wsdl:input message="tns:movimentazioneContoMsgRequest"/>
+			<wsdl:output message="tns:movimentazioneContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="cambioStatoConto">
+			<wsdl:input message="tns:cambioStatoContoMsgRequest"/>
+			<wsdl:output message="tns:cambioStatoContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="saldoConto">
+			<wsdl:input message="tns:saldoContoMsgRequest"/>
+			<wsdl:output message="tns:saldoContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="modificaProvinciaResidenzaConto">
+			<wsdl:input message="tns:modificaProvinciaResidenzaContoMsgRequest"/>
+			<wsdl:output message="tns:modificaProvinciaResidenzaContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="interrogazioneStatoConto">
+			<wsdl:input message="tns:interrogazioneStatoContoMsgRequest"/>
+			<wsdl:output message="tns:interrogazioneStatoContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="migrazioneConto">
+			<wsdl:input message="tns:migrazioneContoMsgRequest"/>
+			<wsdl:output message="tns:migrazioneContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="riepilogoOperazioniMovimentazione">
+			<wsdl:input message="tns:riepilogoOperazioniMovimentazioneMsgRequest"/>
+			<wsdl:output message="tns:riepilogoOperazioniMovimentazioneMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="riepilogoOperazioniServizio">
+			<wsdl:input message="tns:riepilogoOperazioniServizioMsgRequest"/>
+			<wsdl:output message="tns:riepilogoOperazioniServizioMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="stornoMovimentazioneConto">
+			<wsdl:input message="tns:stornoMovimentazioneContoMsgRequest"/>
+			<wsdl:output message="tns:stornoMovimentazioneContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="subregistrazione2">
+			<wsdl:input message="tns:subregistrazione2MsgRequest"/>
+			<wsdl:output message="tns:subregistrazione2MsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="contoDormiente">
+			<wsdl:input message="tns:contoDormienteMsgRequest"/>
+			<wsdl:output message="tns:contoDormienteMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="elencoContiDormienti">
+			<wsdl:input message="tns:elencoContiDormientiMsgRequest"/>
+			<wsdl:output message="tns:elencoContiDormientiMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="aggiornaLimite">
+			<wsdl:input message="tns:aggiornaLimiteMsgRequest"/>
+			<wsdl:output message="tns:aggiornaLimiteMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="interrogazioneLimiti">
+			<wsdl:input message="tns:interrogazioneLimitiMsgRequest"/>
+			<wsdl:output message="tns:interrogazioneLimitiMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="gestioneAutoesclusioneTrasversale">
+			<wsdl:input message="tns:gestioneAutoesclusioneTrasversaleMsgRequest"/>
+			<wsdl:output message="tns:gestioneAutoesclusioneTrasversaleMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="interrogazioneSoggettoAutoescluso">
+			<wsdl:input message="tns:interrogazioneSoggettoAutoesclusoMsgRequest"/>
+			<wsdl:output message="tns:interrogazioneSoggettoAutoesclusoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="aggiornaPseudonimoConto">
+			<wsdl:input message="tns:aggiornaPseudonimoContoMsgRequest"/>
+			<wsdl:output message="tns:aggiornaPseudonimoContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="aggiornaPostaElettronicaConto">
+			<wsdl:input message="tns:aggiornaPostaElettronicaContoMsgRequest"/>
+			<wsdl:output message="tns:aggiornaPostaElettronicaContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="interrogazioneProvinciaResidenzaConto">
+			<wsdl:input message="tns:interrogazioneProvinciaResidenzaContoMsgRequest"/>
+			<wsdl:output message="tns:interrogazioneProvinciaResidenzaContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="interrogazionePseudonimoConto">
+			<wsdl:input message="tns:interrogazionePseudonimoContoMsgRequest"/>
+			<wsdl:output message="tns:interrogazionePseudonimoContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="interrogazionePostaElettronicaConto">
+			<wsdl:input message="tns:interrogazionePostaElettronicaContoMsgRequest"/>
+			<wsdl:output message="tns:interrogazionePostaElettronicaContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="elencoContiAutoesclusi2">
+			<wsdl:input message="tns:elencoContiAutoesclusi2MsgRequest"/>
+			<wsdl:output message="tns:elencoContiAutoesclusi2MsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="stornoMovimentazioneBonusConto">
+			<wsdl:input message="tns:stornoMovimentazioneBonusContoMsgRequest"/>
+			<wsdl:output message="tns:stornoMovimentazioneBonusContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="movimentazioneBonusConto2">
+			<wsdl:input message="tns:movimentazioneBonusConto2MsgRequest"/>
+			<wsdl:output message="tns:movimentazioneBonusConto2MsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="aperturaContoPersonaFisica3">
+			<wsdl:input message="tns:aperturaContoPersonaFisica3MsgRequest"/>
+			<wsdl:output message="tns:aperturaContoPersonaFisica3MsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="aggiornaDatiDocumentoTitolareConto2">
+			<wsdl:input message="tns:aggiornaDatiDocumentoTitolareConto2MsgRequest"/>
+			<wsdl:output message="tns:aggiornaDatiDocumentoTitolareConto2MsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="interrogazioneEstremiDocumento2">
+			<wsdl:input message="tns:interrogazioneEstremiDocumento2MsgRequest"/>
+			<wsdl:output message="tns:interrogazioneEstremiDocumento2MsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="aperturaContoPersonaGiuridica2">
+			<wsdl:input message="tns:aperturaContoPersonaGiuridica2MsgRequest"/>
+			<wsdl:output message="tns:aperturaContoPersonaGiuridica2MsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="elencoContiSenzaSubregistrazione2">
+			<wsdl:input message="tns:elencoContiSenzaSubregistrazione2MsgRequest"/>
+			<wsdl:output message="tns:elencoContiSenzaSubregistrazione2MsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="elencoContiDormienti2">
+			<wsdl:input message="tns:elencoContiDormienti2MsgRequest"/>
+			<wsdl:output message="tns:elencoContiDormienti2MsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="preMigrazioneConto">
+			<wsdl:input message="tns:preMigrazioneContoMsgRequest"/>
+			<wsdl:output message="tns:preMigrazioneContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3aperturaContoPersonaFisica">
+			<wsdl:input message="tns:V3aperturaContoPersonaFisicaMsgRequest"/>
+			<wsdl:output message="tns:V3aperturaContoPersonaFisicaMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3aperturaContoPersonaGiuridica">
+			<wsdl:input message="tns:V3aperturaContoPersonaGiuridicaMsgRequest"/>
+			<wsdl:output message="tns:V3aperturaContoPersonaGiuridicaMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3movimentazioneConto">
+			<wsdl:input message="tns:V3movimentazioneContoMsgRequest"/>
+			<wsdl:output message="tns:V3movimentazioneContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3stornoMovimentazioneConto">
+			<wsdl:input message="tns:V3stornoMovimentazioneContoMsgRequest"/>
+			<wsdl:output message="tns:V3stornoMovimentazioneContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3movimentazioneBonusConto">
+			<wsdl:input message="tns:V3movimentazioneBonusContoMsgRequest"/>
+			<wsdl:output message="tns:V3movimentazioneBonusContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3stornoMovimentazioneBonusConto">
+			<wsdl:input message="tns:V3stornoMovimentazioneBonusContoMsgRequest"/>
+			<wsdl:output message="tns:V3stornoMovimentazioneBonusContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3verificaIntegritaSoftware">
+			<wsdl:input message="tns:V3verificaIntegritaSoftwareMsgRequest"/>
+			<wsdl:output message="tns:V3verificaIntegritaSoftwareMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3accreditoConto">
+			<wsdl:input message="tns:V3accreditoContoMsgRequest"/>
+			<wsdl:output message="tns:V3accreditoContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3stornoAccreditoConto">
+			<wsdl:input message="tns:V3stornoAccreditoContoMsgRequest"/>
+			<wsdl:output message="tns:V3stornoAccreditoContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3cambioStatoConto">
+			<wsdl:input message="tns:V3cambioStatoContoMsgRequest"/>
+			<wsdl:output message="tns:V3cambioStatoContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3interrogazioneStatoConto">
+			<wsdl:input message="tns:V3interrogazioneStatoContoMsgRequest"/>
+			<wsdl:output message="tns:V3interrogazioneStatoContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3subregistrazione">
+			<wsdl:input message="tns:V3subregistrazioneMsgRequest"/>
+			<wsdl:output message="tns:V3subregistrazioneMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3elencoContiSenzaSubregistrazione">
+			<wsdl:input message="tns:V3elencoContiSenzaSubregistrazioneMsgRequest"/>
+			<wsdl:output message="tns:V3elencoContiSenzaSubregistrazioneMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3contoDormiente">
+			<wsdl:input message="tns:V3contoDormienteMsgRequest"/>
+			<wsdl:output message="tns:V3contoDormienteMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3elencoContiDormienti">
+			<wsdl:input message="tns:V3elencoContiDormientiMsgRequest"/>
+			<wsdl:output message="tns:V3elencoContiDormientiMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3gestioneAutoesclusione">
+			<wsdl:input message="tns:V3gestioneAutoesclusioneMsgRequest"/>
+			<wsdl:output message="tns:V3gestioneAutoesclusioneMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3interrogazioneSoggettoAutoescluso">
+			<wsdl:input message="tns:V3interrogazioneSoggettoAutoesclusoMsgRequest"/>
+			<wsdl:output message="tns:V3interrogazioneSoggettoAutoesclusoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3elencoContiAutoesclusi">
+			<wsdl:input message="tns:V3elencoContiAutoesclusiMsgRequest"/>
+			<wsdl:output message="tns:V3elencoContiAutoesclusiMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3aggiornaDatiDocumentoTitolareConto">
+			<wsdl:input message="tns:V3aggiornaDatiDocumentoTitolareContoMsgRequest"/>
+			<wsdl:output message="tns:V3aggiornaDatiDocumentoTitolareContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3interrogazioneEstremiDocumento">
+			<wsdl:input message="tns:V3interrogazioneEstremiDocumentoMsgRequest"/>
+			<wsdl:output message="tns:V3interrogazioneEstremiDocumentoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3aggiornaDatiResidenzaConto">
+			<wsdl:input message="tns:V3aggiornaDatiResidenzaContoMsgRequest"/>
+			<wsdl:output message="tns:V3aggiornaDatiResidenzaContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3interrogazioneDatiResidenzaConto">
+			<wsdl:input message="tns:V3interrogazioneDatiResidenzaContoMsgRequest"/>
+			<wsdl:output message="tns:V3interrogazioneDatiResidenzaContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3aggiornaAutolimitazioneConto">
+			<wsdl:input message="tns:V3aggiornaAutolimitazioneContoMsgRequest"/>
+			<wsdl:output message="tns:V3aggiornaAutolimitazioneContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3interrogazioneAutolimitazioniConto">
+			<wsdl:input message="tns:V3interrogazioneAutolimitazioniContoMsgRequest"/>
+			<wsdl:output message="tns:V3interrogazioneAutolimitazioniContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3superamentoAutolimitazioneConto">
+			<wsdl:input message="tns:V3superamentoAutolimitazioneContoMsgRequest"/>
+			<wsdl:output message="tns:V3superamentoAutolimitazioneContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3aggiornaPseudonimoConto">
+			<wsdl:input message="tns:V3aggiornaPseudonimoContoMsgRequest"/>
+			<wsdl:output message="tns:V3aggiornaPseudonimoContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3interrogazionePseudonimoConto">
+			<wsdl:input message="tns:V3interrogazionePseudonimoContoMsgRequest"/>
+			<wsdl:output message="tns:V3interrogazionePseudonimoContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3aggiornaPostaElettronicaConto">
+			<wsdl:input message="tns:V3aggiornaPostaElettronicaContoMsgRequest"/>
+			<wsdl:output message="tns:V3aggiornaPostaElettronicaContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3interrogazionePostaElettronicaConto">
+			<wsdl:input message="tns:V3interrogazionePostaElettronicaContoMsgRequest"/>
+			<wsdl:output message="tns:V3interrogazionePostaElettronicaContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3migrazioneConfluenzaContinuitaConto">
+			<wsdl:input message="tns:V3migrazioneConfluenzaContinuitaContoMsgRequest"/>
+			<wsdl:output message="tns:V3migrazioneConfluenzaContinuitaContoMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3riepilogoOperazioniMovimentazione">
+			<wsdl:input message="tns:V3riepilogoOperazioniMovimentazioneMsgRequest"/>
+			<wsdl:output message="tns:V3riepilogoOperazioniMovimentazioneMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3riepilogoOperazioniServizio">
+			<wsdl:input message="tns:V3riepilogoOperazioniServizioMsgRequest"/>
+			<wsdl:output message="tns:V3riepilogoOperazioniServizioMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3disconnessione">
+			<wsdl:input message="tns:V3disconnessioneMsgRequest"/>
+			<wsdl:output message="tns:V3disconnessioneMsgResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="V3pagamentoPostPrelievo">
+			<wsdl:input message="tns:V3pagamentoPostPrelievoMsgRequest"/>
+			<wsdl:output message="tns:V3pagamentoPostPrelievoMsgResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="ContiDiGiocoPortBinding" type="tns:ContiDiGiocoWS">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="movimentazioneConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/movimentazioneConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="cambioStatoConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/cambioStatoConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="saldoConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/saldoConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="modificaProvinciaResidenzaConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/modificaProvinciaResidenzaConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="interrogazioneStatoConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/interrogazioneStatoConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="migrazioneConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/migrazioneConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="riepilogoOperazioniMovimentazione">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/riepilogoOperazioniMovimentazione"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="riepilogoOperazioniServizio">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/riepilogoOperazioniServizio"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="stornoMovimentazioneConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/stornoMovimentazioneConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="subregistrazione2">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/subregistrazione2"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="contoDormiente">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/contoDormiente"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="elencoContiDormienti">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/elencoContiDormienti"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="aggiornaLimite">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/aggiornaLimite"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="interrogazioneLimiti">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/interrogazioneLimiti"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="gestioneAutoesclusioneTrasversale">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/gestioneAutoesclusioneTrasversale"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="interrogazioneSoggettoAutoescluso">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/interrogazioneSoggettoAutoescluso"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="aggiornaPseudonimoConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/aggiornaPseudonimoConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="aggiornaPostaElettronicaConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/aggiornaPostaElettronicaConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="interrogazioneProvinciaResidenzaConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/interrogazioneProvinciaResidenzaConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="interrogazionePseudonimoConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/interrogazionePseudonimoConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="interrogazionePostaElettronicaConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/interrogazionePostaElettronicaConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="elencoContiAutoesclusi2">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/elencoContiAutoesclusi2"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="stornoMovimentazioneBonusConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/stornoMovimentazioneBonusConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="movimentazioneBonusConto2">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/movimentazioneBonusConto2"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="aperturaContoPersonaFisica3">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/aperturaContoPersonaFisica3"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="aggiornaDatiDocumentoTitolareConto2">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/aggiornaDatiDocumentoTitolareConto2"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="interrogazioneEstremiDocumento2">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/interrogazioneEstremiDocumento2"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="aperturaContoPersonaGiuridica2">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/aperturaContoPersonaGiuridica2"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="elencoContiSenzaSubregistrazione2">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/elencoContiSenzaSubregistrazione2"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="elencoContiDormienti2">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/elencoContiDormienti2"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="preMigrazioneConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/preMigrazioneConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3aperturaContoPersonaFisica">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3aperturaContoPersonaFisica"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3aperturaContoPersonaGiuridica">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3aperturaContoPersonaGiuridica"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3movimentazioneConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3movimentazioneConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3stornoMovimentazioneConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3stornoMovimentazioneConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3movimentazioneBonusConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3movimentazioneBonusConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3stornoMovimentazioneBonusConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3stornoMovimentazioneBonusConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3verificaIntegritaSoftware">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3verificaIntegritaSoftware"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3accreditoConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3accreditoConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3stornoAccreditoConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3stornoAccreditoConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3cambioStatoConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3cambioStatoConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3interrogazioneStatoConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3interrogazioneStatoConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3subregistrazione">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3subregistrazione"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3elencoContiSenzaSubregistrazione">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3elencoContiSenzaSubregistrazione"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3contoDormiente">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3contoDormiente"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3elencoContiDormienti">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3elencoContiDormienti"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3gestioneAutoesclusione">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3gestioneAutoesclusione"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3interrogazioneSoggettoAutoescluso">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3interrogazioneSoggettoAutoescluso"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3elencoContiAutoesclusi">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3elencoContiAutoesclusi2"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3aggiornaDatiDocumentoTitolareConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3aggiornaDatiDocumentoTitolareConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3interrogazioneEstremiDocumento">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3interrogazioneEstremiDocumento"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3aggiornaDatiResidenzaConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3aggiornaDatiResidenzaConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3interrogazioneDatiResidenzaConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3interrogazioneDatiResidenzaConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3aggiornaAutolimitazioneConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3aggiornaAutolimitazioneConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3interrogazioneAutolimitazioniConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3interrogazioneAutolimitazioniConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3superamentoAutolimitazioneConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3superamentoAutolimitazioneConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3aggiornaPseudonimoConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3aggiornaPseudonimoConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3interrogazionePseudonimoConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3interrogazionePseudonimoConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3aggiornaPostaElettronicaConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3aggiornaPostaElettronicaConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3interrogazionePostaElettronicaConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3interrogazionePostaElettronicaConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3migrazioneConfluenzaContinuitaConto">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3migrazioneConfluenzaContinuitaConto"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3riepilogoOperazioniMovimentazione">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3riepilogoOperazioniMovimentazione"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3riepilogoOperazioniServizio">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3riepilogoOperazioniServizio"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3disconnessione">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3disconnessione"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="V3pagamentoPostPrelievo">
+			<soap:operation soapAction="http://ws.contidigioco.sogei.it/V3pagamentoPostPrelievo"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="ContiDiGiocoService">
+		<wsdl:port name="ContiDiGiocoPort" binding="tns:ContiDiGiocoPortBinding">
+			<soap:address location="http://localhost:9081/anag_conti_gioco/services/ContiDiGiocoPort"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
